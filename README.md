@@ -19,9 +19,9 @@ You can also create a list with all tags of the created favicons with the flag `
 
 `$ ./favicon.sh image.png -x`
 
-## The following files will be created
+## The following files will be created by this script
 
-- favicon.ico _(16x16 32x32 64x64 96x96 128x128 256x256)_
+- favicon.ico _(16x16 32x32 64x64 96x96)_
 - favicon-16x16.png _(16x16)_
 - favicon-32x32.png _(32x32)_
 - favicon-64x64.png _(64x64)_
