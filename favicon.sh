@@ -4,7 +4,18 @@ FAVICON=$1
 
 # colors
 CYAN='\033[0;36m'
+RED='\033[0;31m'
 COLORRESET='\033[0m'
+
+if [ -z $FAVICON ]; then
+    echo -ne "${RED}You must supply a source image as the argument to this command. \n${COLORRESET}"
+    exit
+fi
+
+if [ ! -f $FAVICON ]; then
+    echo -ne "${RED}Source image \"$FAVICON\" does not exist. \n${COLORRESET}"
+    exit
+fi
 
 echo -ne "${CYAN}Generating square base image \n${COLORRESET}"
 convert $FAVICON -resize 256x256! -transparent white favicon-256x256.png
